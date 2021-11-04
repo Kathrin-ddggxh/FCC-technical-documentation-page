@@ -14,10 +14,18 @@
         <li class="nav-item">
           <a href="#introduction" class="nav-link">Introduction</a>
         </li>
-        <li class="nav-item"><a href="#" class="nav-link"></a></li>
-        <li class="nav-item"><a href="#" class="nav-link"></a></li>
-        <li class="nav-item"><a href="#" class="nav-link"></a></li>
-        <li class="nav-item"><a href="#" class="nav-link"></a></li>
+        <li class="nav-item">
+          <a href="#flexbox-elements" class="nav-link">Flexbox Elements</a>
+        </li>
+        <li class="nav-item">
+          <a href="#parent-element" class="nav-link">Parent Element</a>
+        </li>
+        <li class="nav-item">
+          <a href="#child-elements" class="nav-link">Child Elements</a>
+        </li>
+        <li class="nav-item">
+          <a href="#references" class="nav-link">References</a>
+        </li>
         <li class="nav-item"><a href="#" class="nav-link"></a></li>
         <li class="nav-item"><a href="#" class="nav-link"></a></li>
         <li class="nav-item"><a href="#" class="nav-link"></a></li>
@@ -28,7 +36,7 @@
     <main id="main-doc">
       <section class="main-section" id="introduction">
         <header class="main-section-title">Introduction</header>
-        <div class="main-section-content">
+        <article class="main-section-content">
           <p>
             The Flexbox Layout (Flexible Box) module aims at providing a more
             efficient way to lay out, align and distribute space among items in
@@ -55,26 +63,85 @@
             components of an application, and small-scale layouts, while the
             Grid layout is intended for larger scale layouts.
           </p>
-        </div>
+        </article>
       </section>
 
-      <section class="main-section">
-        <header class="main-section-title">Topic header</header>
-        <div class="main-section-content">
-          <p></p>
-        </div>
+      <section class="main-section" id="flexbox-elements">
+        <header class="main-section-title">Flexbox Elements</header>
+        <article class="main-section-content">
+          <p>
+            To start using the Flexbox model, you need to first define a flex
+            container.
+          </p>
+          <img
+            src="images/flex-container.PNG"
+            alt="flex-container with three flex items"
+          />
+          <p>
+            The element above represents a flex container (the blue area) with
+            three flex items.
+          </p>
+          <xmp>
+            <div class="flex-container">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+            </div>
+          </xmp>
+          <p>
+            In this case, the flex container is the div with the class of
+            "flex-container". The three child elements are flex items.
+          </p>
+        </article>
       </section>
-      <section class="main-section">
-        <header class="main-section-title">Topic header</header>
+      <section class="main-section" id="parent-element">
+        <header class="main-section-title">Parent Element (Container)</header>
+        <p>
+          The flex container becomes flexible by setting the display property to
+          flex:
+        </p>
+        <xmp
+> 
+          .flex-container {
+            display: flex; 
+          } 
+        </xmp>
+        <p>
+          The most important flex container properties when first starting with
+          flexbox are:
+        </p>
+        <ul class="content-list">
+          <li class="content-list-item">flex-direction</li>
+
+          <li class="content-list-item">justify-content</li>
+          <li class="content-list-item">align-items</li>
+          <li class="content-list-item">align-content</li>
+        </ul>
+      </section>
+      <section class="main-section" id="child-elements">
+        <header class="main-section-title">Child Elements (Items)</header>
         <p></p>
       </section>
-      <section class="main-section">
-        <header class="main-section-title">Topic header</header>
-        <p></p>
-      </section>
-      <section class="main-section">
-        <header class="main-section-title">Topic header</header>
-        <p></p>
+      <section class="main-section" id="references">
+        <header class="main-section-title">References</header>
+        <p>All the documentation in this page is taken from:</p>
+        <ul class="reference-list">
+          <li class="reference-list-item">
+            <a
+              href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+              target="_blank"
+            >
+              A complete guide to flexbox | CSS tricks</a
+            >
+          </li>
+          <li class="reference-list-item">
+            <a
+              href="https://www.w3schools.com/csS/css3_flexbox.asp"
+              target="_blank"
+              >w3schools</a
+            >
+          </li>
+        </ul>
       </section>
       <section class="main-section">
         <header class="main-section-title">Topic header</header>
@@ -113,6 +180,8 @@
     References/Credit:
 
     https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+    https://www.w3schools.com/csS/css3_flexbox.asp
 
 
 -->
