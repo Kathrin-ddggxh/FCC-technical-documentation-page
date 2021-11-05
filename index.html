@@ -136,26 +136,48 @@
       <section class="sub-section" id="flex-direction">
         <header class="sub-section-title">Flex-direction</header>
         <article class="sub-section-content">
-          <p></p>
+          <p>The flex-direction property defines in which direction the container wants to stack the flex items.</p>
+          <xmp>
+            .flex-container {
+              display: flex;
+              flex-direction: row | row-reverse | column | column-reverse;
+            }
+          </xmp>
+          <p><strong>row (default):</strong> left to right</p>
+          <p><strong>row-reverse:</strong> right to left</p>
+          <p><strong>column:</strong> top to bottom</p>
+          <p><strong>column-reverse:</strong> bottom to top</p>
         </article>
       </section>
-         <section class="sub-section" id="justify-content">
+      <section class="sub-section" id="justify-content">
         <header class="sub-section-title">Justify-content</header>
         <article class="sub-section-content">
-          <p></p>
+          <p>The justify-content property is used to align the flex items.</p>
+          <xmp>
+            .flex-container {
+              display: flex;
+              justify-content: center | flex-end | flex-start | space-between | space-around | space-evenly;
+            }
+          </xmp>
+          <p><strong>center: </strong>items are centered along the line</p>
+          <p><strong>flex-end: </strong>items are packed toward the end of the flex-direction.</p>
+          <p><strong>flex-start (default): </strong>items are packed toward the start of the flex-direction.</p>
+          <p><strong>space-between: </strong>items are evenly distributed in the line; first item is on the start line, last item on the end line</p>
+          <p><strong>space-around: </strong>items are evenly distributed in the line with equal space around them. Note that visually the spaces aren’t equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.</p>
+          <p><strong>space-evenly: </strong>items are distributed so that the spacing between any two items (and the space to the edges) is equal.</p>
         </article>
       </section>
          <section class="sub-section" id="align-items">
         <header class="sub-section-title">Align-items</header>
         <article class="sub-section-content">
-          <p></p>
+          <p>This defines the default behavior for how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).</p>
         </article>
       </section>
         
       <section class="main-section" id="child-elements">
         <header class="main-section-title">Child Elements (Items)</header>
         <article class="main-section-content">
-        <p>The direct child elements of a flex container automatically becomes flexible (flex) items.</p>
+        <p>The direct child elements of a flex container automatically becomes flexible (flex) items and can be manipulated indiviudally. </p>
       </section>
       </article>
       <section class="main-section" id="references">
