@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+font-family: 'Roboto', sans-serif;
+font-weight: 100, 300, 500;
+*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+img {
+    width: 60vw;
+}
+
+xmp {
+    overflow: scroll;
+    background-color: rgb(231, 231, 231);
+    font-size: 0.85rem;
+}
+
+strong {
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-item {
+    margin: 1.5rem;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    border-right: #000 solid 2px;
+    overflow: scroll;
+    padding-right: 1em;
+}
+
+.main-doc {
+    width: 65%;
+    margin-left: 270px;
+    padding-right: 15px;
+}
+
+.nav-title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5em;
+}
+
+.nav-list,
+.nav-sublist {
+    list-style: none;
+}
+
+.nav-list {
+    padding: 0;
+}
+
+.nav-item + .nav-item {
+    border-top: rgb(80, 80, 80) solid 1px;
+    padding-top: 2rem;
+}
+
+.nav-item {
+    font-size: 1.5rem;
+}
+
+.nav-subitem {
+    font-size: 1.4rem;
+    border-top: rgb(80, 80, 80) solid 1px;
+    padding-top: 1.5rem;
+}
+
+.main-section {
+    margin: 2.5rem 0;
+}
+
+.main-section-title {
+    font-size: 2rem;
+}
+
+.sub-section {
+    margin-top: 2rem;
+}
+
+.sub-section-title {
+    font-size: 1.7rem;
+}
+
+.content-list-link:hover,
+.reference-list-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+}

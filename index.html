@@ -1,210 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsiveness with Flexbox</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <nav id="navbar">
-      <header>Using Flexbox</header>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a href="#introduction" class="nav-link">Introduction</a>
-        </li>
-        <li class="nav-item">
-          <a href="#flexbox-elements" class="nav-link">Flexbox Elements</a>
-        </li>
-        <li class="nav-item">
-          <a href="#parent-element" class="nav-link">Parent Element</a>
-          <ul class="nav-sublist">
-            <li class="nav-subitem">
-              <a href="#" class="nav-sublink">Flex-direction</a>
-            </li>
-            <li class="nav-subitem">
-              <a href="#" class="nav-sublink">Justify-content</a>
-            </li>
-            <li class="nav-subitem">
-              <a href="#" class="nav-sublink">Align-items</a>
-            </li>
-           
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a href="#child-elements" class="nav-link">Child Elements</a>
-        </li>
-        <li class="nav-item">
-          <a href="#references" class="nav-link">References</a>
-        </li>
-      </ul>
-    </nav>
-    <main id="main-doc">
-      <section class="main-section" id="introduction">
-        <header class="main-section-title">Introduction</header>
-        <article class="main-section-content">
-          <p>
-            The Flexbox Layout (Flexible Box) module aims at providing a more
-            efficient way to lay out, align and distribute space among items in
-            a container, even when their size is unknown and/or dynamic (thus
-            the word “flex”).
-          </p>
-          <p>
-            The main idea behind the flex layout is to give the container the
-            ability to alter its items’ width/height (and order) to best fill
-            the available space (mostly to accommodate to all kind of display
-            devices and screen sizes). A flex container expands items to fill
-            available free space or shrinks them to prevent overflow.
-          </p>
-          <p>
-            Most importantly, the flexbox layout is direction-agnostic as
-            opposed to the regular layouts (block which is vertically-based and
-            inline which is horizontally-based). While those work well for
-            pages, they lack flexibility (no pun intended) to support large or
-            complex applications (especially when it comes to orientation
-            changing, resizing, stretching, shrinking, etc.).
-          </p>
-          <p>
-            <strong>Note:</strong> Flexbox layout is most appropriate to the
-            components of an application, and small-scale layouts, while the
-            Grid layout is intended for larger scale layouts.
-          </p>
-        </article>
-      </section>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsiveness with Flexbox</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <nav id="navbar" class="flex-item navbar">
+                <header class="nav-title">Using Flexbox</header>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#introduction" class="nav-link"
+                            >Introduction</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="#flexbox-elements" class="nav-link"
+                            >Flexbox Elements</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="#parent-element" class="nav-link"
+                            >Parent Element</a
+                        >
+                        <ul class="nav-sublist">
+                            <li class="nav-subitem">
+                                <a href="#flex-direction" class="nav-sublink"
+                                    >Flex-direction</a
+                                >
+                            </li>
+                            <li class="nav-subitem">
+                                <a href="#justify-content" class="nav-sublink"
+                                    >Justify-content</a
+                                >
+                            </li>
+                            <li class="nav-subitem">
+                                <a href="#align-items" class="nav-sublink"
+                                    >Align-items</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#child-elements" class="nav-link"
+                            >Child Elements</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="#references" class="nav-link">References</a>
+                    </li>
+                </ul>
+            </nav>
+            <main id="main-doc" class="flex-item main-doc">
+                <section class="main-section" id="introduction">
+                    <header class="main-section-title">Introduction</header>
+                    <article class="main-section-content">
+                        <p>
+                            The Flexbox Layout (Flexible Box) module aims at
+                            providing a more efficient way to lay out, align and
+                            distribute space among items in a container, even
+                            when their size is unknown and/or dynamic (thus the
+                            word “flex”).
+                        </p>
+                        <p>
+                            The main idea behind the flex layout is to give the
+                            container the ability to alter its items’
+                            width/height (and order) to best fill the available
+                            space (mostly to accommodate to all kind of display
+                            devices and screen sizes). A flex container expands
+                            items to fill available free space or shrinks them
+                            to prevent overflow.
+                        </p>
+                        <p>
+                            Most importantly, the flexbox layout is
+                            direction-agnostic as opposed to the regular layouts
+                            (block which is vertically-based and inline which is
+                            horizontally-based). While those work well for
+                            pages, they lack flexibility (no pun intended) to
+                            support large or complex applications (especially
+                            when it comes to orientation changing, resizing,
+                            stretching, shrinking, etc.).
+                        </p>
+                        <p>
+                            <strong>Note:</strong> Flexbox layout is most
+                            appropriate to the components of an application, and
+                            small-scale layouts, while the Grid layout is
+                            intended for larger scale layouts.
+                        </p>
+                    </article>
+                </section>
 
-      <section class="main-section" id="flexbox-elements">
-        <header class="main-section-title">Flexbox Elements</header>
-        <article class="main-section-content">
-          <p>
-            To start using the Flexbox model, you need to first define a flex
-            container.
-          </p>
-          <img
-            src="images/flex-container.PNG"
-            alt="flex-container with three flex items"
-          />
-          <p>
-            The element above represents a flex container (the blue area) with
-            three flex items.
-          </p>
-          <xmp>
+                <section class="main-section" id="flexbox-elements">
+                    <header class="main-section-title">Flexbox Elements</header>
+                    <article class="main-section-content">
+                        <p>
+                            To start using the Flexbox model, you need to first
+                            define a flex container.
+                        </p>
+                        <img
+                            src="images/flex-container.PNG"
+                            alt="flex-container with three flex items"
+                        />
+                        <p>
+                            The element above represents a flex container (the
+                            blue area) with three flex items.
+                        </p>
+                        <xmp>
             <div class="flex-container">
               <div>1</div>
               <div>2</div>
               <div>3</div>
             </div>
           </xmp>
-          <p>
-            In this case, the flex container is the div with the class of
-            "flex-container". The three child elements are flex items.
-          </p>
-        </article>
-      </section>
-      <section class="main-section" id="parent-element">
-        <header class="main-section-title">Parent Element (Container)</header>
-        <article class="main-section-content">
-        <p>
-          The flex container becomes flexible by setting the display property to
-          flex:
-        </p>
-        <xmp
+                        <p>
+                            In this case, the flex container is the div with the
+                            class of "flex-container". The three child elements
+                            are flex items.
+                        </p>
+                    </article>
+                </section>
+                <section class="main-section" id="parent-element">
+                    <header class="main-section-title">
+                        Parent Element (Container)
+                    </header>
+                    <article class="main-section-content">
+                        <p>
+                            The flex container becomes flexible by setting the
+                            display property to flex:
+                        </p>
+                        <xmp
 > 
           .flex-container {
             display: flex; 
           } 
-        </xmp>
-        <p>
-          The most important flex container properties when first starting with
-          flexbox are:
-        </p>
-        <ul class="content-list">
-          <li class="content-list-item">
-            <a href="#flex-direction" class="content-list-link">flex-direction</a>
-          </li>
+        </xmp
+                        >
+                        <p>
+                            The most important flex container properties when
+                            first starting with flexbox are:
+                        </p>
+                        <ul class="content-list">
+                            <li class="content-list-item">
+                                <a
+                                    href="#flex-direction"
+                                    class="content-list-link"
+                                    >flex-direction</a
+                                >
+                            </li>
 
-          <li class="content-list-item">
-            <a href="#justify-content" class="content-list-link">justify-content</a>
-          </li>
-          <li class="content-list-item">
-            <a href="#align-items" class="content-list-link">align-items</a>
-          </li>
-         
-        </ul>
-        </article>
-      </section>
-      <section class="sub-section" id="flex-direction">
-        <header class="sub-section-title">Flex-direction</header>
-        <article class="sub-section-content">
-          <p>The flex-direction property defines in which direction the container wants to stack the flex items.</p>
-          <xmp>
+                            <li class="content-list-item">
+                                <a
+                                    href="#justify-content"
+                                    class="content-list-link"
+                                    >justify-content</a
+                                >
+                            </li>
+                            <li class="content-list-item">
+                                <a href="#align-items" class="content-list-link"
+                                    >align-items</a
+                                >
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+                <section class="sub-section" id="flex-direction">
+                    <header class="sub-section-title">Flex-direction</header>
+                    <article class="sub-section-content">
+                        <p>
+                            The flex-direction property defines in which
+                            direction the container wants to stack the flex
+                            items.
+                        </p>
+                        <xmp
+>
             .flex-container {
               display: flex;
               flex-direction: row | row-reverse | column | column-reverse;
             }
-          </xmp>
-          <p><strong>row (default):</strong> left to right</p>
-          <p><strong>row-reverse:</strong> right to left</p>
-          <p><strong>column:</strong> top to bottom</p>
-          <p><strong>column-reverse:</strong> bottom to top</p>
-        </article>
-      </section>
-      <section class="sub-section" id="justify-content">
-        <header class="sub-section-title">Justify-content</header>
-        <article class="sub-section-content">
-          <p>The justify-content property is used to align the flex items.</p>
-          <xmp>
+          </xmp
+                        >
+                        <p><strong>row (default):</strong> left to right</p>
+                        <p><strong>row-reverse:</strong> right to left</p>
+                        <p><strong>column:</strong> top to bottom</p>
+                        <p><strong>column-reverse:</strong> bottom to top</p>
+                    </article>
+                </section>
+                <section class="sub-section" id="justify-content">
+                    <header class="sub-section-title">Justify-content</header>
+                    <article class="sub-section-content">
+                        <p>
+                            The justify-content property is used to align the
+                            flex items.
+                        </p>
+                        <xmp
+>
             .flex-container {
               display: flex;
               justify-content: center | flex-end | flex-start | space-between | space-around | space-evenly;
             }
-          </xmp>
-          <p><strong>center: </strong>items are centered along the line</p>
-          <p><strong>flex-end: </strong>items are packed toward the end of the flex-direction.</p>
-          <p><strong>flex-start (default): </strong>items are packed toward the start of the flex-direction.</p>
-          <p><strong>space-between: </strong>items are evenly distributed in the line; first item is on the start line, last item on the end line</p>
-          <p><strong>space-around: </strong>items are evenly distributed in the line with equal space around them. Note that visually the spaces aren’t equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.</p>
-          <p><strong>space-evenly: </strong>items are distributed so that the spacing between any two items (and the space to the edges) is equal.</p>
-        </article>
-      </section>
-         <section class="sub-section" id="align-items">
-        <header class="sub-section-title">Align-items</header>
-        <article class="sub-section-content">
-          <p>This defines the default behavior for how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).</p>
-        </article>
-      </section>
-        
-      <section class="main-section" id="child-elements">
-        <header class="main-section-title">Child Elements (Items)</header>
-        <article class="main-section-content">
-        <p>The direct child elements of a flex container automatically becomes flexible (flex) items and can be manipulated indiviudally. </p>
-      </section>
-      </article>
-      <section class="main-section" id="references">
-        <header class="main-section-title">References</header>
-        <article class="main-section-content">
-        <p>All the documentation in this page is taken from:</p>
-        <ul class="reference-list">
-          <li class="reference-list-item">
-            <a
-              href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
-              target="_blank"
-            >
-              A complete guide to flexbox | CSS tricks</a
-            >
-          </li>
-          <li class="reference-list-item">
-            <a
-              href="https://www.w3schools.com/csS/css3_flexbox.asp"
-              target="_blank"
-              >w3schools</a
-            >
-          </li>
-        </ul>
-        </article>
-      </section>
-    </main>
-  </body>
+          </xmp
+                        >
+                        <p>
+                            <strong>center: </strong>items are centered along
+                            the line
+                        </p>
+                        <p>
+                            <strong>flex-end: </strong>items are packed toward
+                            the end of the flex-direction.
+                        </p>
+                        <p>
+                            <strong>flex-start (default): </strong>items are
+                            packed toward the start of the flex-direction.
+                        </p>
+                        <p>
+                            <strong>space-between: </strong>items are evenly
+                            distributed in the line; first item is on the start
+                            line, last item on the end line
+                        </p>
+                        <p>
+                            <strong>space-around: </strong>items are evenly
+                            distributed in the line with equal space around
+                            them. Note that visually the spaces aren’t equal,
+                            since all the items have equal space on both sides.
+                            The first item will have one unit of space against
+                            the container edge, but two units of space between
+                            the next item because that next item has its own
+                            spacing that applies.
+                        </p>
+                        <p>
+                            <strong>space-evenly: </strong>items are distributed
+                            so that the spacing between any two items (and the
+                            space to the edges) is equal.
+                        </p>
+                    </article>
+                </section>
+
+                <section class="sub-section" id="align-items">
+                    <header class="sub-section-title">Align-items</header>
+                    <article class="sub-section-content">
+                        <p>
+                            This defines the default behavior for how flex items
+                            are laid out along the cross axis on the current
+                            line. Think of it as the justify-content version for
+                            the cross-axis (perpendicular to the main-axis). The
+                            values for this property are the same as for the
+                            justify-content property.
+                        </p>
+                    </article>
+                </section>
+
+                <section class="main-section" id="child-elements">
+                    <header class="main-section-title">
+                        Child Elements (Items)
+                    </header>
+                    <article class="main-section-content">
+                        <p>
+                            The direct child elements of a flex container
+                            automatically becomes flexible (flex) items and can
+                            be manipulated indiviudally.
+                        </p>
+                    </article>
+                </section>
+                <section class="main-section" id="references">
+                    <header class="main-section-title">References</header>
+                    <article class="main-section-content">
+                        <p>All the documentation in this page is taken from:</p>
+                        <ul class="reference-list">
+                            <li class="reference-list-item">
+                                <a
+                                    class="reference-list-link"
+                                    href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+                                    target="_blank"
+                                >
+                                    A complete guide to flexbox | CSS tricks</a
+                                >
+                            </li>
+                            <li class="reference-list-item">
+                                <a
+                                    class="reference-list-link"
+                                    href="https://www.w3schools.com/csS/css3_flexbox.asp"
+                                    target="_blank"
+                                    >w3schools</a
+                                >
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </body>
 </html>
 
 <!--
